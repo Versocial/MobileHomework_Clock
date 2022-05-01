@@ -1,4 +1,7 @@
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.os.Message
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +14,15 @@ import java.util.*
 class TextClockFragment : Fragment() {
 
     private lateinit var textClock: TextView
-    private val timer:Timer=Timer("textClock")
+    private lateinit var timer:Timer
     private val sdf: SimpleDateFormat = SimpleDateFormat("HH:mm:ss")
     private val period:Long=500
+    private val handler:Handler=object : Handler(Looper.getMainLooper()) {
+        override fun handleMessage(msg: Message) {
+            textClock.text =msg.data.getString("time")
+        }
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,9 +36,11 @@ class TextClockFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        timer=Timer("textClock")
         timer.schedule(object : TimerTask() {
             override fun run() {
-                textClock.text=sdf.format(Date())
+                val info=sdf.format(Date())
+                handler.sendMessage(Message.obtain().apply { data=Bundle().apply { putString("time",info) } })
             }
         },0,period)
     }

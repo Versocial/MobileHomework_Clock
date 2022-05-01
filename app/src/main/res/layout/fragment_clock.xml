@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     >
 <com.example.mobilehomework_clock.clock_view.MyClock
     android:id="@+id/clock"

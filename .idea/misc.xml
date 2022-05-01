@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/outworkspace/androidWorkSpace/MobileHomework_Clock/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/outworkspace/androidWorkSpace/MobileHomework_Clock/app/src/main/res/layout/fragment_clock.xml" value="0.27395833333333336" />
+        <entry key="..\:/outworkspace/androidWorkSpace/MobileHomework_Clock/app/src/main/res/layout/fragment_clock.xml" value="0.264" />
         <entry key="..\:/outworkspace/androidWorkSpace/MobileHomework_Clock/app/src/main/res/layout/fragment_text_clock.xml" value="0.27395833333333336" />
+        <entry key="..\:/outworkspace/androidWorkSpace/MobileHomework_Clock/app/src/main/res/layout/my_clock.xml" value="0.21822916666666667" />
         <entry key="..\:/outworkspace/androidWorkSpace/MobileHomework_Clock/app/src/main/res/layout/sample_my_clock.xml" value="0.259375" />
       </map>
     </option>
